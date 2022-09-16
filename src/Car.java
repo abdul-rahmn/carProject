@@ -85,4 +85,23 @@ public class Car {
     public void setEngin(Engin engin) {
         this.engin = engin;
     }
+
+    /////
+
+    static void createCar(ArrayList<Car> cars,int id, String company, String name, String type, String dateOdCreate, int year,
+            ArrayList<Wheel> Wheels, Engin engin) {
+        cars.add(new Car(id, company, name, type, dateOdCreate, year, Wheels, engin));
+    }
+
+    public void readCar() {
+        System.out.println("ID:" + getId() + " , " + "Company: " + getCompany() + "\n"
+                + "Name: " + getName() + " , " + "Type: " + getType() + "\n"
+                + "Date Of Create: " + getDateOdCreate() + " , " + "Year:" + getYear());
+        System.out.println("Wheels:");
+        for (Wheel w : Wheels) {
+            w.readWheel();
+        }
+        System.out.println("Engin:");
+        engin.readEngin();
+    }
 }
