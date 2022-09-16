@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Engin {
     private int id;
     private String type;
@@ -61,5 +63,18 @@ public class Engin {
 
     public void setCarId(int carId) {
         this.carId = carId;
+    }
+
+    ///
+
+    static void createEngin(ArrayList<Engin> engins, int id, String type, int maxSpeed, int numberOfCylenders,
+            String country, int carId) {
+        engins.add(new Engin(id, type, maxSpeed, numberOfCylenders, country, carId));
+    }
+
+    public void readEngin() {
+        System.out.println("ID:" + getId() + " , " + "Type: " + getType() + " , "
+                + "Max Speed: " + getMaxSpeed() + " , " + "Number Of Cylenders: " + getNumberOfCylenders() + " , "
+                + "Country: " + getCountry() + " , " + "Car ID: " + getCarId());
     }
 }
