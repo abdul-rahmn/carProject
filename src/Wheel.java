@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Wheel {
     private int id;
     private int numberOfScrews;
@@ -52,4 +54,16 @@ public class Wheel {
     public void setCarId(int carId) {
         this.carId = carId;
     }
+
+    ///
+
+    static void createWheel(ArrayList<Wheel> wheels,int id, int numberOfScrews, int thikness, String type, int carId) {
+        wheels.add(new Wheel(id, numberOfScrews, thikness, type, carId));
+    }
+
+    public void readWheel() {
+        System.out.println("ID:" + getId() + " , " + "Number Of Screws: " + getNumberOfScrews() + " , "
+                + "Thikness: " + getThikness() + " , " + "Type: " + getType() + " , "
+                + "Car ID: " + getCarId());
+    }    
 }
