@@ -85,9 +85,9 @@ public class Car {
     public void setEngin(Engin engin) {
         this.engin = engin;
     }
-    
 
-    static void createCar(ArrayList<Car> cars,int id, String company, String name, String type, String dateOdCreate, int year,
+    static void createCar(ArrayList<Car> cars, int id, String company, String name, String type, String dateOdCreate,
+            int year,
             ArrayList<Wheel> Wheels, Engin engin) {
         cars.add(new Car(id, company, name, type, dateOdCreate, year, Wheels, engin));
     }
@@ -102,5 +102,44 @@ public class Car {
         }
         System.out.println("Engin:");
         engin.readEngin();
+    }
+
+    public void update(String company, String name, String type, String dateOdCreate, int year, ArrayList<Wheel> Wheels,
+            Engin engin) {
+        setCompany(company);
+        setName(name);
+        setType(type);
+        setDateOdCreate(dateOdCreate);
+        setYear(year);
+        setWheels(Wheels);
+        setEngin(engin);
+    }
+
+    static void updateCar(ArrayList<Car> cars, int id, String company, String name, String type, String dateOdCreate,
+            int year, ArrayList<Wheel> Wheels,
+            Engin engin) {
+        for (Car w : cars) {
+            if (w.getId() == id) {
+                w.setCompany(company);
+                w.setName(name);
+                w.setType(type);
+                w.setDateOdCreate(dateOdCreate);
+                w.setYear(year);
+                w.setWheels(Wheels);
+                w.setEngin(engin);
+                break;
+            }
+        }
+    }
+
+    static void deleteCar(ArrayList<Car> cars, int id) {
+        int index = -1;
+        for (Car w : cars) {
+            index++;
+            if (w.getId() == id) {
+                cars.remove(index);
+                break;
+            }
+        }
     }
 }
