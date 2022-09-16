@@ -12,7 +12,30 @@ public class App {
     static ArrayList<Car> cars = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
+        // call the Fuinctions thats create objects and add thier to Lists
+        addWheels1ToList();
+        addWheels2ToList();
+        addWheels3ToList();
+        addEnginsToList();
+        addCarsToList();
 
+        //Create a New Object Car And add to list cars
+        Car.createCar(cars, 4, "sss", "as", "asd", "asd", 2018, wheels1, engins.get(0));
+        //Create a New Object Wheel And add to list wheels
+        Wheel.createWheel(wheels1,  5, 10, 200, "ad", 2);
+        //Create a New Object Engin And add to list engins
+        Engin.createEngin(engins, 1, "asldklsa", 555, 12, "sasss", 2);
+
+        // Read Data for Car 1
+        cars.get(0).readCar();
+        System.out.println("--------------------------------");
+        // Read Data for Car 2
+        cars.get(1).readCar();
+        System.out.println("--------------------------------");
+        // Read Data for Car 3
+        cars.get(2).readCar();
+
+        
     }
 
     public static void addWheels1ToList() {
