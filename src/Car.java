@@ -85,8 +85,7 @@ public class Car {
     public void setEngin(Engin engin) {
         this.engin = engin;
     }
-
-    /////
+    
 
     static void createCar(ArrayList<Car> cars,int id, String company, String name, String type, String dateOdCreate, int year,
             ArrayList<Wheel> Wheels, Engin engin) {
