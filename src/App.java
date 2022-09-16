@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class App {
     // Create a List for all Objects
     // Lists Weels
@@ -9,8 +10,9 @@ public class App {
     static ArrayList<Engin> engins = new ArrayList<>();
     // List Cars
     static ArrayList<Car> cars = new ArrayList<>();
+
     public static void main(String[] args) throws Exception {
-        
+
     }
 
     public static void addWheels1ToList() {
@@ -44,5 +46,15 @@ public class App {
         wheels3.add(w2);
         wheels3.add(w3);
         wheels3.add(w4);
+    }
+
+    // Fuinction thats create Engin objects and add thier to List
+    public static void addEnginsToList() {
+        Engin e1 = new Engin(1, "deseale", 220, 10, "USA", 1);
+        Engin e2 = new Engin(2, "Gasoline", 360, 8, "italian", 2);
+        Engin e3 = new Engin(3, "deseale", 200, 4, "turkya", 3);
+        engins.add(e1);
+        engins.add(e2);
+        engins.add(e3);
     }
 }
