@@ -57,4 +57,14 @@ public class App {
         engins.add(e2);
         engins.add(e3);
     }
+
+    // Fuinction thats create Car objects and add thier to List
+    public static void addCarsToList() {
+        Car c1 = new Car(1, "tesla", "tesla1", "sport", "1/1/2021", 2022, wheels1, engins.get(0));        
+        Car c2 = new Car(2, "BMW", "BMW1", "sport", "1/1/2020", 2022, wheels2, engins.get(1));
+        Car c3 = new Car(3, "foard", "foard1", "sport", "1/1/2018", 2022, wheels3, engins.get(2));
+        cars.add(c1);
+        cars.add(c2);
+        cars.add(c3);
+    }
 }
