@@ -65,5 +65,35 @@ public class Wheel {
         System.out.println("ID:" + getId() + " , " + "Number Of Screws: " + getNumberOfScrews() + " , "
                 + "Thikness: " + getThikness() + " , " + "Type: " + getType() + " , "
                 + "Car ID: " + getCarId());
-    }    
+    }
+
+    public void update(int numberOfScrews, int thikness, String type, int carId) {
+        setNumberOfScrews(numberOfScrews);
+        setThikness(thikness);
+        setType(type);
+        setCarId(carId);
+    }
+
+    static void updateWheel(ArrayList<Wheel> Wheels, int id, int numberOfScrews, int thikness, String type, int carId) {
+        for (Wheel w : Wheels) {
+            if (w.getId() == id) {
+                w.setNumberOfScrews(numberOfScrews);
+                w.setThikness(thikness);
+                w.setType(type);
+                w.setCarId(carId);
+                break;
+            }
+        }
+    }
+
+    static void deleteWell(ArrayList<Wheel> Wheels, int id) {
+        int index = -1;
+        for (Wheel w : Wheels) {
+            index++;
+            if (w.getId() == id) {
+                Wheels.remove(index);
+                break;
+            }
+        }
+    }
 }
