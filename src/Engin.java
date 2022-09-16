@@ -77,4 +77,37 @@ public class Engin {
                 + "Max Speed: " + getMaxSpeed() + " , " + "Number Of Cylenders: " + getNumberOfCylenders() + " , "
                 + "Country: " + getCountry() + " , " + "Car ID: " + getCarId());
     }
+
+    public void update(String type, int maxSpeed, int numberOfCylenders, String country, int carId) {
+        setType(type);
+        setMaxSpeed(maxSpeed);
+        setNumberOfCylenders(numberOfCylenders);
+        setCountry(country);
+        setCarId(carId);
+    }
+
+    static void updateWeel(ArrayList<Engin> engins, int id, String type, int maxSpeed, int numberOfCylenders,
+            String country, int carId) {
+        for (Engin w : engins) {
+            if (w.getId() == id) {
+                w.setType(type);
+                w.setMaxSpeed(maxSpeed);
+                w.setNumberOfCylenders(numberOfCylenders);
+                w.setCountry(country);
+                w.setCarId(carId);
+                break;
+            }
+        }
+    }
+
+    static void deleteEngin(ArrayList<Engin> engins, int id) {
+        int index = -1;
+        for (Engin e : engins) {
+            index++;
+            if (e.getId() == id) {
+                engins.remove(index);
+                break;
+            }
+        }
+    }
 }
