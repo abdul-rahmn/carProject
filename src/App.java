@@ -19,12 +19,19 @@ public class App {
         addEnginsToList();
         addCarsToList();
 
-        //Create a New Object Car And add to list cars
+        // Create a New Object Car And add to list cars
         Car.createCar(cars, 4, "sss", "as", "asd", "asd", 2018, wheels1, engins.get(0));
-        //Create a New Object Wheel And add to list wheels
-        Wheel.createWheel(wheels1,  5, 10, 200, "ad", 2);
-        //Create a New Object Engin And add to list engins
+        // Create a New Object Wheel And add to list wheels
+        Wheel.createWheel(wheels1, 5, 10, 200, "ad", 2);
+        // Create a New Object Engin And add to list engins
         Engin.createEngin(engins, 1, "asldklsa", 555, 12, "sasss", 2);
+
+        // Update Car from list cars
+        cars.get(2).update("marcedesss", "mrs11", "master", "1/2/2020", 2020, wheels2, engins.get(1));
+        // Update Wheel from list wheels1
+        wheels1.get(1).update(55555, 15555, "wasasd2", 1);
+        // Update Engin from list engins
+        engins.get(1).update("Gasoline1111", 220, 10, "koba", 1);
 
         // Read Data for Car 1
         cars.get(0).readCar();
@@ -35,7 +42,16 @@ public class App {
         // Read Data for Car 3
         cars.get(2).readCar();
 
-        
+        // Delete Well from List Wheels1 By ID
+        Wheel.deleteWell(wheels1, 2);
+        System.out.println(wheels1.size());
+        // Delete Engin from List engins By ID
+        Engin.deleteEngin(engins, 2);
+        System.out.println(engins.size());
+        // Delete Car from List cars By ID
+        Car.deleteCar(cars, 3);
+        System.out.println(cars.size());
+
     }
 
     public static void addWheels1ToList() {
@@ -83,7 +99,7 @@ public class App {
 
     // Fuinction thats create Car objects and add thier to List
     public static void addCarsToList() {
-        Car c1 = new Car(1, "tesla", "tesla1", "sport", "1/1/2021", 2022, wheels1, engins.get(0));        
+        Car c1 = new Car(1, "tesla", "tesla1", "sport", "1/1/2021", 2022, wheels1, engins.get(0));
         Car c2 = new Car(2, "BMW", "BMW1", "sport", "1/1/2020", 2022, wheels2, engins.get(1));
         Car c3 = new Car(3, "foard", "foard1", "sport", "1/1/2018", 2022, wheels3, engins.get(2));
         cars.add(c1);
